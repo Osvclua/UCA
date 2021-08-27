@@ -1,16 +1,6 @@
-narch="casorio.txt"
-arch=open(narch,"r")
-res={}
-while True:
-    linea=arch.readline()
-    if not linea:
-        break
-    print (linea,'\n')
-    
-# for letras in linea:
-#         res[letras] = res.get(letras, 0) + 1
-# linea=arch.readline().replace('\n','')
-# print (linea,'\n')
-# for letras in linea:
-#         res[letras] = res.get(letras, 0) + 1
-# print ("Cuenta \n",str(res))
+from math import sqrt
+
+def quadratic(a, b, c):
+    x1 = -b / (2*a)
+    x2 = sqrt(b**2 - 4*a*c) / (2*a)
+    return (x1 + x2), (x1 - x2)
