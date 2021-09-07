@@ -4,6 +4,13 @@
 #include <cstdlib>
 #include <cstdio>
 #include <fstream>
+#if defined(__APPLE__) && defined(__MACH__)
+	/* Apple OSX and iOS (Darwin). ------------------------------ */
+  #define PT "/dev/ttys"
+  #elif defined(__LINUX__)
+  #define PT  "/dev/pt"
+#endif
+
 using namespace std;
 
 int main(int argc, char *argv[])
@@ -16,7 +23,7 @@ int main(int argc, char *argv[])
   string pid = to_string(getpid());
   cout << "Pid=" << pid << endl;
   string t(argv[1]), s;
-  string term = "/dev/pts/" + t;
+  string term = PT + t;
   ofstream sali(term);
   sali << "Hola mundo" << endl;
   cout << "Pid=" << pid << ", strings a pasar ..." << endl;

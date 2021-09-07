@@ -4,6 +4,12 @@
 #include <cstdlib>
 #include <cstdio>
 #include <fstream>
+#if defined(__APPLE__) && defined(__MACH__)
+	/* Apple OSX and iOS (Darwin). ------------------------------ */
+  #define PT "/dev/ttys"
+  #elif defined(__LINUX__)
+  #define PT  "/dev/pt"
+#endif
 using namespace std;
 
 int main(int argc, char *argv[])
@@ -15,7 +21,7 @@ int main(int argc, char *argv[])
   }
   string t(argv[1]), aux;
 
-  string term = "/dev/pts/" + t;
+  string term = PT + t;
 
   cout << "term=" << term << endl;
   ofstream termi2(term);
