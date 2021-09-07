@@ -7,8 +7,8 @@
 #if defined(__APPLE__) && defined(__MACH__)
 	/* Apple OSX and iOS (Darwin). ------------------------------ */
   #define PT "/dev/ttys"
-  #elif defined(__LINUX__)
-  #define PT  "/dev/pt"
+  #elif defined(__linux__)
+  #define PT "/dev/pts/"
 #endif
 
 using namespace std;

@@ -1,3 +1,4 @@
+// NO FUNCINA; NO SE PUEDE REDIRECCIONAR ASI EL STDIN 
 #include <iostream>
 #include <unistd.h>
 #include <sys/types.h>
@@ -7,7 +8,7 @@
 #if defined(__APPLE__) && defined(__MACH__)
 	/* Apple OSX and iOS (Darwin). ------------------------------ */
   #define PT "/dev/ttys"
-  #elif defined(__LINUX__)
+  #elif defined(__linux__)
   #define PT  "/dev/pt"
 #endif
 using namespace std;
