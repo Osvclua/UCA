@@ -21,12 +21,16 @@ class Entero{
 		cout<<"Asignacion de "<<e.getInt()<<endl;
 		return *this;
 	}
+	
+	friend ostream& operator<<(ostream&os, Entero e){
+		return os<<e.val;
+	}
 };
-	bool esPar(Entero e){
+
+bool esPar(Entero e){
 		return e.getInt()%2==0;
 	}
 	
-//int Entero::nro=1;
 		
 int main(int argc, char *argv[]) {
 	
@@ -34,8 +38,14 @@ int main(int argc, char *argv[]) {
 	cout<<"Creado Entero con "<<e.getInt()<<endl;
 	cout<<"EsPar "<<boolalpha<<esPar(e)<<endl;
 	Entero e1(e);
+	cout<<"e="<<e;
+	cout<<"e1="<<e1<<endl;
 	Entero e2(3);
-	cout<<"asigno"<<endl;
+	cout<<"e2="<<e2<<endl;
+	cout<<endl<<"asigno e2=e1=e "<<endl;
 	e2=e1=e;
+	cout<<"e1="<<e1<<endl;
+	cout<<"e2="<<e2<<endl;
+
 	
 }

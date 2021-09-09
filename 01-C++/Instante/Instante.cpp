@@ -1,4 +1,4 @@
-#include "instante.hpp"
+#include "Instante.hpp"
 #ifndef instante_cpp
 #define instante_cpp
 

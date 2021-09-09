@@ -1,3 +1,5 @@
+#include <iostream>
+#include <fstream>
 #ifndef instante_h
 #define instante_h
 using namespace std;
