@@ -1,5 +1,8 @@
 #include <iostream>
 #include <algorithm>
+#include <sys/types.h>
+#include <unistd.h>
+
 using namespace std;
 
 bool capi(string a){
@@ -9,7 +12,8 @@ bool capi(string a){
 }
 
 int main(){
-    string st1;
+    cout<<"Soy el proceso "<<getpid()<<endl; 
+        string st1;
     int i1;
     cout<<"Ingrese un entero "<<endl;
     cin>>i1;
