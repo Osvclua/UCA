@@ -5,9 +5,9 @@
 using namespace std;
 
 class Instante{
-public:
 	int minuto;
 	int segundo;
+public:
 	int getMinuto();
 	int getSegundo();
 	void setSegundo(int s);

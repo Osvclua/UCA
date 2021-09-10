@@ -12,7 +12,7 @@ class Entero{
 	
 	Entero(Entero& e):val(e.getInt()){
 		cout<<"Constructor de copia "<<e.getInt()<<endl;
-	}
+	}   //e1=e2
 	int getInt(){return val;}
 	~Entero(){
 		cout<<"Destruye entero "<<val<<endl;
@@ -28,24 +28,26 @@ class Entero{
 };
 
 bool esPar(Entero e){
-		return e.getInt()%2==0;
+		return e.getInt()%2==0; 
 	}
 	
 		
 int main(int argc, char *argv[]) {
 	
 	Entero e(3);
+	
 	cout<<"Creado Entero con "<<e.getInt()<<endl;
+	cout<<"e="<<e<<endl;
+	
 	cout<<"EsPar "<<boolalpha<<esPar(e)<<endl;
-	Entero e1(e);
+	
+	Entero e1(1);
 	cout<<"e="<<e;
 	cout<<"e1="<<e1<<endl;
-	Entero e2(3);
+	Entero e2(2);
 	cout<<"e2="<<e2<<endl;
 	cout<<endl<<"asigno e2=e1=e "<<endl;
-	e2=e1=e;
+	(e2=e1)=e;
 	cout<<"e1="<<e1<<endl;
 	cout<<"e2="<<e2<<endl;
-
-	
 }

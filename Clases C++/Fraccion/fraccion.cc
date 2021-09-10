@@ -29,7 +29,7 @@ fraccion fraccion::operator+(fraccion f){
 		  denominador*f.denominador);
 }
 
-bool fraccion::operator<(fraccion f){
+bool fraccion::operator<(fraccion f){  
   float este=static_cast<float>(numerador)/static_cast<float>(denominador);
   float efe=static_cast<float>(f.numerador)/static_cast<float>(f.denominador);
   return este<efe;
@@ -38,7 +38,8 @@ bool fraccion::operator<(fraccion f){
 ostream& operator<<(ostream&os, fraccion f){
   return os<<f.numerador<<"/"<<f.denominador;
 }
-
+// (cout<<a)<<b
+// cin>> a  (1/7)
 istream& operator>>(istream& is, fraccion& f){
   string tmp;
   is>>tmp;

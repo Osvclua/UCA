@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Instante.hpp"
 #include "Instante.cpp"
 
 using namespace std;
@@ -9,6 +10,8 @@ int main(int argc, char *argv[]) {
    i1.impr(cout);
 	cout<<" y i2=";
 	i2.impr(cout);
-	cout<<endl;	
+	cout<<endl;
+  cout<<"i1 vale (i1.minuto: i1.segundo)="<<i1.getMinuto()<<":"<<
+  i1.getSegundo()<<endl;
 	
 }
