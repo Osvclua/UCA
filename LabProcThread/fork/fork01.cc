@@ -10,21 +10,26 @@ int main ()
 /* ver los pid's que genera un fork */
 {	
     int pidhijo;
-    cout<<endl<<"El PADRE antes del fork: pid="<<getpid()<<
-	" group pid= "<<getpgrp()<<endl;
+	string res;
+    cout<<endl<<"El PADRE antes del fork: pid="<<getpid()<<endl;
     if ( (pidhijo = fork () ) == -1) 
 	{perror("no se puede hacer el fork");exit(1);}
 	else if (pidhijo == 0)
 		{/* es el proceso del hijo */
 		cout<<endl<< "---> Es el HIJO con pid = "<<getpid()<<
 		     " cuyo padre es pid = "<< getppid()<<endl;
-		cout<<"     El group pid del hijo es = "<< getpgrp()<<endl;
+
+		//cout<<"     El group pid del hijo es = "<< getpgrp()<<endl;
+		cout <<"Hijo string para continuar ..."<<endl;
+		cin>>res;
 		exit(0);
 		}
 	    else
 	        {/* es el proceso del padre */
 		cout <<endl<< "Es el PADRE con pid = "<<getpid()<<
 		    " y su hijo es pid = "<<pidhijo<<endl;
+			cout <<"Padre string para continuar ..."<<endl;
+		cin>>res;
 		exit(0);
 		}
 }
