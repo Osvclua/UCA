@@ -1,1 +1,1 @@
-CXXFLAGS= --std=c++20
+LOADLIBES=-lpthread

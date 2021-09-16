@@ -22,7 +22,7 @@ int main ()
 	else if (pidhijo == 0)
 		{	/* es el proceso del hijo */
 			printf ("\n---> Es el HIJO con pid = %d, cuyo padre es pid = %d\n", getpid(), getppid());
-			printf ("     El group pid del hijo es = %d\n", getpgrp());
+			//printf ("     El group pid del hijo es = %d\n", getpgrp());
 			exit(0);
 		}
 		else

@@ -16,8 +16,8 @@ int main(){
   while (cin>>f4){
     cout<<"Leido "<<f4<<endl;
     //hasta aca 8 puntos
-    cout<<"Ingrese una fraccion"<<endl;
     cout<<f3<<"< "<<f4<<boolalpha<<" ="<<(f3<f4)<<endl;
+    cout<<"Ingrese una fraccion"<<endl;
   }
  // hasta aca 10 puntos
 }
