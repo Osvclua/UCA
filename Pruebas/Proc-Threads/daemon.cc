@@ -18,6 +18,7 @@ void espera(){
 
 int main(){
 pid_t hijo;
+int status;
   switch (hijo=fork()) {
 	case -1: {cout << "Error al lanzar el proceso ";exit(3);}
 	case 0: { // hijo
@@ -25,8 +26,9 @@ pid_t hijo;
         espera();
 		exit (0);}	
 	default: { // padre
-		cout << "El padre pid nro "<<getpid()<<" duerme"<<endl;
-		sleep(1200);
-		exit(0);}
+		cout << "El padre pid nro "<<getpid()<<" wait"<<endl;
+		//sleep(1200);
+		wait (&status)
+;		exit(0);}
 	}
 }

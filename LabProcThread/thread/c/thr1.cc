@@ -13,16 +13,19 @@ using namespace std;
 // compilar con -lpthread.
 
 void *func(void *arg){
-  cout <<"soy la thread pthread_self()->"<<pthread_self();
+  cout <<"soy la thread gettid()->"<<gettid();
   cout <<" pertenezco al proceso getpid() "<<getpid()<<endl;
-  sleep (10);
+  sleep (1200);
   return NULL;
 }
 int main(){
-  pthread_t t;
+  pthread_t t,t1;
   cout << "Soy el proceso principal getpid()->"<<getpid();
-  cout <<" y mi thread es  pthread_self()->"
-    <<pthread_self()<<endl;
+  cout <<" y mi thread es  gettid()->"
+    <<gettid()<<endl;
   pthread_create(&t,NULL,func,NULL);
+  pthread_create(&t1,NULL,func,NULL);
+
   pthread_join(t,NULL);
+  pthread_join(t1,NULL);
 }
