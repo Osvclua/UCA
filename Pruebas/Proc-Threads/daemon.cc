@@ -10,7 +10,7 @@ using namespace std;
 void espera(){
     int status;
 	daemon(1,1);  //daemon(nochdir, noclose)  args!= 0 no cambia a / ni hace stdout=/dev/null
-    cout<<"proceso "<<getpid()<<" en espera (wait()) "<<endl;
+    cout<<"proceso "<<getpid()<<" durmiendo (sleep()) "<<endl;
 	sleep(1200);
 
     //wait(&status);
