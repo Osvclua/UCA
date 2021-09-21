@@ -1,4 +1,5 @@
-msg="Hola mundo!"
-print (msg)
-s=input("tu nombre ")
-print ("Hola ",s)
+for i in range(2,6):
+    print ("\r i=",i, end="")
+print("\n")
+
+
